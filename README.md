@@ -26,18 +26,28 @@ pacman -S --needed - < pkglist.txt
 
 ## Other
 - [oh-my-zsh](https://ohmyz.sh)
-  `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+  ```
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
 - [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
-  `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1`
-  `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
+  ```
+  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+  ```
 - [vim-plug](https://github.comjunegunn/vim-plug)
-  `sh -c 'curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
+  ```
+  sh -c 'curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  ```
 - [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-  `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+  ```
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  ```
 - [nvm](https://github.com/nvm-sh/nvm)
-  `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh`
-  `nvm install node`
+  ```
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
+  nvm install node
+  ```
 
 ## TODO
-[ ] Evaluate starship prompt instead of spaceship-prompt
-[ ] Evaluate deno instead of node
+- [ ] Evaluate starship prompt instead of spaceship-prompt
+- [ ] Evaluate deno instead of node
