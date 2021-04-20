@@ -21,13 +21,14 @@ config config --local status.showUntrackedFiles no
 ## Packages
 ```
 pacman -Syu
-pacman -S zsh \
-          git \
-          openssh \
-          python3 \
+pacman -S git \
+          go \
           neovim \
+          openssh \
+          python \
           python-neovim \
-          tmux
+          tmux \
+          zsh
 ```
 
 ## Other
@@ -40,6 +41,10 @@ pacman -S zsh \
   `sh -c 'curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
 - [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
   `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+- [nvm](https://github.com/nvm-sh/nvm)
+  `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh`
+  `nvm install node`
 
 ## TODO
-[ ] Evaluate starship prompt
+[ ] Evaluate starship prompt instead of spaceship-prompt
+[ ] Evaluate deno instead of node

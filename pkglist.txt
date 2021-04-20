@@ -1,0 +1,9 @@
+git
+go
+neovim
+openssh
+python
+python-pynvim
+sudo
+tmux
+zsh
