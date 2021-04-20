@@ -47,7 +47,3 @@ pacman -S --needed - < pkglist.txt
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | zsh
   nvm install node
   ```
-
-## TODO
-- [ ] Evaluate starship prompt instead of spaceship-prompt
-- [ ] Evaluate deno instead of node
