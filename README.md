@@ -1,5 +1,12 @@
-# dotfiles and other setup
+# I broke my Arch install again
 
+## Packages
+```
+pacman -Syu
+pacman -S --needed - < pkglist.txt
+```
+
+## dotfiles
 I followed the guide at https://atlassian.com/git/tutorials/dotfiles
 
 Snippet copied from there.
@@ -16,12 +23,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 config checkout
 config config --local status.showUntrackedFiles no
-```
-
-## Packages
-```
-pacman -Syu
-pacman -S --needed - < pkglist.txt
 ```
 
 ## Other
