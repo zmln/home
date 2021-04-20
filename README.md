@@ -21,14 +21,7 @@ config config --local status.showUntrackedFiles no
 ## Packages
 ```
 pacman -Syu
-pacman -S git \
-          go \
-          neovim \
-          openssh \
-          python \
-          python-neovim \
-          tmux \
-          zsh
+pacman -S --needed - < pkglist.txt
 ```
 
 ## Other
