@@ -4,7 +4,8 @@ capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 local lspconfig = require("lspconfig")
 
 local servers = {
-  "gopls"
+  "gopls",
+  "terraformls",
 }
 
 for _, lsp in ipairs(servers) do
