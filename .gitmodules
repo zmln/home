@@ -1,0 +1,3 @@
+[submodule "eden"]
+	path = eden
+	url = git@github.com:zmln/eden

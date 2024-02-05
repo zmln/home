@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blocky
+spec:
+  selector:
+    matchLabels:
+      app: blocky
+  template:
+    metadata:
+      labels:
+        app: blocky
+    spec:
+      containers:
+        - name: blocky
+          image: spx01/blocky
+          ports:
+            - containerPort: 53
+              name: tcp-dns
+              protocol: TCP
+            - containerPort: 53
+              name: udp-dns
+              protocol: UDP
+            - containerPort: 4000
+              name: prometheus
+          volumeMounts:
+            - name: config
+              mountPath: /app/config.yml
+              subPath: config.yml
+      volumes:
+        - name: config
+          configMap:
+            name: config.yml

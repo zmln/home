@@ -1,0 +1,14 @@
+upstream:
+  default:
+    - 8.8.8.8
+    - 8.8.4.4
+blocking:
+  blackLists:
+    ads:
+      - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  clientGroupsBlock:
+    default:
+      - ads
+ports:
+  dns: 53
+  http: 4000

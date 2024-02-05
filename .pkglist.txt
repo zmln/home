@@ -1,0 +1,9 @@
+sudo
+zsh
+openssh
+git
+neovim
+tmux
+starship
+kubectl
+ripgrep
