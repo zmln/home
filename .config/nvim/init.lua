@@ -42,8 +42,8 @@ require('lazy').setup({
   {'hrsh7th/cmp-path'},
   {'hrsh7th/nvim-cmp'},
 
---  {'L3MON4D3/LuaSnip'},
---  {'saadparwaiz1/cmp_luasnip'},
+  {'L3MON4D3/LuaSnip'},
+  {'saadparwaiz1/cmp_luasnip'},
 
   {'nvim-tree/nvim-web-devicons'},
   {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
@@ -62,6 +62,7 @@ require('lazy').setup({
 
 require('options')
 require('treesitter')
+require('lsp')
 require('autocomplete')
 require('fileexplorer')
 require('statusline')
