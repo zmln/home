@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: languagetool
+spec:
+  selector:
+    matchLabels:
+      app: languagetool
+  template:
+    metadata:
+      labels:
+        app: languagetool
+    spec:
+      containers:
+        - name: languagetool
+          image: meyay/languagetool
+          ports:
+            - containerPort: 8010
+              name: http
+          env:
+            - name: langtool_fasttextModel
+              value: /fasttext/lid.176.bin
+            - name: download_ngrams_for_langs
+              value: en
+          volumeMounts:
+            - mountPath: /fasttext
+              name: fasttext
+            - mountPath: /ngrams
+              name: ngrams
+      volumes:
+        - name: fasttext
+          persistentVolumeClaim:
+            claimName: fasttext
+        - name: ngrams
+          persistentVolumeClaim:
+            claimName: ngrams
