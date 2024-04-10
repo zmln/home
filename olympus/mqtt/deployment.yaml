@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mqtt
+spec:
+  selector:
+    matchLabels:
+      app: mqtt
+  template:
+    metadata:
+      labels:
+        app: mqtt
+    spec:
+      containers:
+        - name: mqtt
+          image: mochimqtt/server
+          ports:
+            - containerPort: 1883
+              name: tcp-mqtt
+            - containerPort: 1882
+              name: tcp-ws
+            - containerPort: 1880
+              name: tcp-stats
+            - containerPort: 8080
+              name: http-web
+          volumeMounts:
+            - name: config
+              mountPath: /config.yml
+              subPath: config.yml
+          args:
+            - "--config=/config.yml"
+      volumes:
+        - name: config
+          configMap:
+            name: config.yml

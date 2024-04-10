@@ -12,6 +12,9 @@ blocking:
 ports:
   dns: 53
   http: 4000
+prometheus:
+  enable: true
 customDNS:
   mapping:
     shangri.lan: 192.168.86.44
+    robovac.lan: 192.168.86.51

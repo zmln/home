@@ -3,11 +3,11 @@ blocky-pod = $(shell kubectl -n blocky get pod -l app=blocky -o jsonpath='{.item
 blocky-refresh-list:
 	kubectl -n blocky exec $(blocky-pod) -- /app/blocky lists refresh
 
-blocky-refresh-list:
+blocky-enable:
 	kubectl -n blocky exec $(blocky-pod) -- /app/blocky blocking enable
 
-blocky-refresh-list:
-	kubectl -n blocky exec $(blocky-pod) -- /app/blocky blocking disable
+blocky-disable:
+	kubectl -n blocky exec $(blocky-pod) -- /app/blocky blocking disable --groups ads
 
 blocky-restart-pods:
 	kubectl -n blocky rollout restart deployment blocky
