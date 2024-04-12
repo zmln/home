@@ -4,6 +4,11 @@ commonLabels:
   app: homeassistant
 namespace: homeassistant
 resources:
-  - service.yaml
   - deployment.yaml
   - persistentvolumeclaim.yaml
+configMapGenerator:
+  - name: configuration.yaml
+    files:
+      - configuration.yaml
+    options:
+      disableNameSuffixHash: true

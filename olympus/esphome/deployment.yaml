@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: esphome
+spec:
+  selector:
+    matchLabels:
+      app: esphome
+  template:
+    metadata:
+      labels:
+        app: esphome
+    spec:
+      containers:
+        - name: esphome
+          image: ghcr.io/esphome/esphome
+          ports:
+            - containerPort: 6052
+              name: http
+          volumeMounts:
+            - mountPath: /config
+              name: config
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
+                - NET_RAW
+                - NET_BROADCAST
+      hostNetwork: true
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: esphome-config
