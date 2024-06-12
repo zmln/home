@@ -5,7 +5,7 @@ upstream:
 blocking:
   blackLists:
     ads:
-      - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+      - https://big.oisd.nl/domainswild
   clientGroupsBlock:
     default:
       - ads
